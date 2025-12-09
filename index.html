@@ -214,16 +214,35 @@
 							
 							// Create popup content
 							const popupContent = `
-								<div style="max-width: 300px;">
-									<h3>${props.NAME_EN || ''} / ${props.NAME_TC || ''}</h3>
-									<p><strong>牌照類別：</strong> ${props.DATASET_EN || ''} / ${props.DATASET_TC || ''}</p>
-									<p><strong>英文地址：</strong><br>
-									${props.ADDRESS_EN || ''}<br>
-									<p><strong>中文地址：</strong><br>
-									${props.ADDRESS_TC || ''}</p>
-									<p><strong>牌照到期日：</strong> ${props.NSEARCH05_EN || 'N/A'}</p>
-									<br/>
-									<p><strong>更新日期：</strong> ${props.LASTUPDATE || 'N/A'}</p>
+								<div style="max-width: 300px;max-height: 50vh">
+									<h3>
+										${props.NSEARCH03_TC || ''} / ${props.NSEARCH03_EN || ''}
+									</h3>
+									<div class="d-flex flex-row">
+										<p class="m-1">
+											<strong>牌照類別：</strong>
+											<br/>
+											${props.NAME_TC || ''} / ${props.NAME_EN || ''}
+										</p>
+										<p class="m-1">
+											<strong>牌照類別：</strong>
+											<br/>
+											${props.DATASET_EN || ''} / ${props.DATASET_TC || ''}
+										</p>
+										<p class="m-1">
+											<strong>地址：</strong>
+											<ul>
+												<li>${props.ADDRESS_TC || ''}</li>
+												<li>${props.ADDRESS_EN || ''}</li>
+											</ul>
+										</p>
+										<p class="m-1">
+											<strong>牌照到期日：</strong> ${props.NSEARCH05_EN || 'N/A'}
+										</p>
+										<p class="m-1">
+											<strong>更新日期：</strong> ${props.LASTUPDATE || 'N/A'}
+										</p>
+									</div>
 								</div>
 							`;
 							
